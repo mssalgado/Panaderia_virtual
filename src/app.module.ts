@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { ProductModule } from './product/product.module';
+import { StockModule } from './stock/stock.module';
 
 
 
@@ -24,7 +25,8 @@ import { ProductModule } from './product/product.module';
     }),
     AuthModule,
     UserModule,
-    ProductModule
+    ProductModule,
+    StockModule
   ],
   controllers: [AppController],
   providers: [AppService],
