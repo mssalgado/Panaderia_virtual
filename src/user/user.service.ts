@@ -15,6 +15,11 @@ export class UserService {
   constructor(@InjectRepository(UserEntity) private readonly userRepository: Repository<UserEntity>
     ) {}
 
+  async findById(id:string):Promise<UserEntity>{
+  const userEntity = await this.userRepository.findOne(id);
+  return userEntity;
+  
+  }
   userEntityToUserDTO(userEntity: UserEntity):UserDTO{
     const {id, usuario, nombres,apellidos,correo,tiIdentidad,nuIdentidad,ciudad,barrio,direccion,creacionfe,activo }= userEntity;
     let user:UserDTO = {id, usuario, nombres,apellidos,correo,tiIdentidad,nuIdentidad,ciudad,barrio,direccion,creacionfe, activo};

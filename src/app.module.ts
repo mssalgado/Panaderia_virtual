@@ -5,6 +5,8 @@ import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
+import { ProductModule } from './product/product.module';
+
 
 
 @Module({
@@ -18,13 +20,11 @@ import { AuthModule } from './auth/auth.module';
       password: process.env.DATABASE_PASS,
       database: process.env.DATABASE_NAME,
       autoLoadEntities: true,
-      entities: [
-       
-      ],
       synchronize: true,
     }),
     AuthModule,
-    UserModule
+    UserModule,
+    ProductModule
   ],
   controllers: [AppController],
   providers: [AppService],

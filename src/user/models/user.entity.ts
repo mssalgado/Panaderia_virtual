@@ -1,5 +1,7 @@
-import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, Entity,OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import * as bcrypt from 'bcrypt';
+import { ProductEntity } from "src/product/entities/product.entity";
+
 
 
 @Entity("users")
@@ -31,6 +33,9 @@ export class UserEntity{
     creacionfe : Date;
     @Column({nullable: false, default: true})
     activo : boolean;
+
+    @OneToMany(type => ProductEntity, product => product.user )
+    products: ProductEntity[];
 
     @BeforeInsert() async hashPasswors(){
         this.contraseña = await bcrypt.hash(this.contraseña,10);
