@@ -6,7 +6,7 @@ import { UserDTO } from './dto/user.dto';
 import { LoginUserDTO } from './dto/login_user.dto';
 import * as bcrypt from 'bcrypt';
 import { CreateUserDTO } from './dto/create_user.dto';
-import { IUser } from './interfaces/user.interface';
+
 
 
 

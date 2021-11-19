@@ -18,13 +18,13 @@ export class ProductService {
   async create(createProductDto: CreateProductDto) {
   
 
-    const { name, userID, precio } = createProductDto;
-    const product = new ProductEntity();
-    product.nombre = name;
-    product.precio = precio;
-    product.user = await this.userService.findById(userID);
-    await this.productRepository.save(product);
-    return product;  
+    const { nombre, userID, precio } = createProductDto;
+    const producto = new ProductEntity();
+    producto.nombre = nombre;
+    producto.precio = precio;
+    producto.user = await this.userService.findById(userID);
+    await this.productRepository.save(producto);
+    return producto;  
   }
 
   async findAll() {
