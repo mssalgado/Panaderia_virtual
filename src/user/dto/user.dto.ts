@@ -1,4 +1,5 @@
 import {IsEmail, IsNotEmpty} from "class-validator";
+import { Role } from "../models/user.enum";
 
 export class UserDTO{
 
@@ -14,6 +15,7 @@ export class UserDTO{
     readonly direccion : string;
     readonly creacionfe : Date;
     readonly activo : boolean;
+    readonly role : Role;
 
     
 }

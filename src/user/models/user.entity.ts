@@ -1,6 +1,7 @@
 import { BeforeInsert, Column, Entity,OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import * as bcrypt from 'bcrypt';
 import { ProductEntity } from "src/product/entities/product.entity";
+import { Role } from "./user.enum";
 
 
 
@@ -33,6 +34,9 @@ export class UserEntity{
     creacionfe : Date;
     @Column({nullable: false, default: true})
     activo : boolean;
+
+    @Column({nullable: true, default: Role.AUTHUSER})
+    role : Role;
 
     @OneToMany(type => ProductEntity, product => product.user )
     products: ProductEntity[];

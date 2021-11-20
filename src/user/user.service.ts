@@ -21,8 +21,8 @@ export class UserService {
   
   }
   userEntityToUserDTO(userEntity: UserEntity):UserDTO{
-    const {id, usuario, nombres,apellidos,correo,tiIdentidad,nuIdentidad,ciudad,barrio,direccion,creacionfe,activo }= userEntity;
-    let user:UserDTO = {id, usuario, nombres,apellidos,correo,tiIdentidad,nuIdentidad,ciudad,barrio,direccion,creacionfe, activo};
+    const {id, usuario, nombres,apellidos,correo,tiIdentidad,nuIdentidad,ciudad,barrio,direccion,creacionfe,activo, role }= userEntity;
+    let user:UserDTO = {id, usuario, nombres,apellidos,correo,tiIdentidad,nuIdentidad,ciudad,barrio,direccion,creacionfe, activo, role};
     return user;
 
   }

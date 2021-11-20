@@ -5,9 +5,11 @@ import { CreateUserDTO } from 'src/user/dto/create_user.dto';
 import { HttpException } from '@nestjs/common';
 import { LoginUserDTO } from 'src/user/dto/login_user.dto';
 import { IloginStatus } from './interfaces/login_status.interface';
-import { UserService } from 'src/user/user.service';
 import { AuthGuard } from '@nestjs/passport';
 import { IJwtPayload } from './interfaces/jwt_payload.interface';
+import { RoleGuard } from './guards/role.guard';
+import { Role } from './guards/role.decorator';
+
 
 @Controller('auth')
 export class AuthController {
@@ -37,7 +39,8 @@ export class AuthController {
     }
 
     @Get('whoami')
-    @UseGuards(AuthGuard())
+    @Role('ADMIN', 'AUTHUSER')
+    @UseGuards(AuthGuard(), RoleGuard)
     public async testAuth(@Req() req: any): Promise<IJwtPayload>{
         return req.user;
     }
