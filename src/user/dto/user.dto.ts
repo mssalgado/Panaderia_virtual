@@ -16,6 +16,7 @@ export class UserDTO{
     readonly creacionfe : Date;
     readonly activo : boolean;
     readonly role : Role;
+    readonly products?: number[];
 
     
 }

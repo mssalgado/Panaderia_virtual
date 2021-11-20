@@ -33,7 +33,7 @@ export class ProductService {
     
   }
 
-  async findOne(id: number) {
+  async findOne(id: number) { 
     const producto = await this.productRepository.findOne(id);
     return producto;
   }

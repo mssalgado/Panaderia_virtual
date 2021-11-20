@@ -10,7 +10,7 @@ export class ProductEntity {
     @Column( {length: 100})
     nombre: string;
 
-    @Column( )
+    @Column()
     precio: number;
 
     
