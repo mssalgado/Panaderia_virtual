@@ -14,6 +14,9 @@ export class StockEntity{
     PreProducto: number;
 
     @Column()
+    categoria: string;
+
+    @Column()
     info: string;
 
     @Column()

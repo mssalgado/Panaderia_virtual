@@ -46,7 +46,7 @@ export class ProductController {
 
   
   @Patch(':id')
-    async updateStudent(@Res() res, @Body() updateProductDto: UpdateProductDto, @Param('id') id ){
+    async update(@Res() res, @Body() updateProductDto: UpdateProductDto, @Param('id') id ){
 
         const producto = await this.productService.update(id, updateProductDto);
 
@@ -63,7 +63,7 @@ export class ProductController {
 
 
   @Delete(':id')
-    async deleteStudent(@Res() res , @Param('id') id){
+    async delete(@Res() res , @Param('id') id){
         const producto = await this.productService.remove(+id);
 
         if(!producto){

@@ -1,9 +1,10 @@
 import {IsEmail, IsNotEmpty} from "class-validator";
 
-export class CreateUserDTO{
-    
+export class CreatestockDTO{
+
     @IsNotEmpty() readonly NomProducto : string;
-    @IsNotEmpty() readonly PreProducto : string;
+    @IsNotEmpty() readonly PreProducto : number;
+    readonly categoria : string;
     readonly info : string;
     readonly cantidad : number;
     readonly photoURL : string;
