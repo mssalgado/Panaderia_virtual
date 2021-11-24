@@ -10,6 +10,7 @@ import { StockListComponent } from './stock/stock-list/stock-list.component';
 import { StockFormComponent } from './stock/stock-form/stock-form.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserCartComponent } from './user/user-cart/user-cart.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
     StockListComponent,
     StockFormComponent,
     NavbarComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    UserCartComponent
   ],
   imports: [
     BrowserModule,
