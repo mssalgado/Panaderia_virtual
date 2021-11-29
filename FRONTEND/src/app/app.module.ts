@@ -11,7 +11,6 @@ import { StockFormComponent } from './stock/stock-form/stock-form.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserCartComponent } from './user/user-cart/user-cart.component';
-import { HomeComponent } from './shared/home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { HomeComponent } from './shared/home/home.component';
     StockFormComponent,
     NavbarComponent,
     UserLoginComponent,
-    UserCartComponent,
-    HomeComponent
+    UserCartComponent
   ],
   imports: [
     BrowserModule,
