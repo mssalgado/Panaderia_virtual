@@ -12,6 +12,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserCartComponent } from './user/user-cart/user-cart.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
