@@ -7,6 +7,7 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
 
 const routes: Routes = [
+  { path: '', component: StockListComponent, pathMatch: 'full'},
   { path: 'stock', component: StockListComponent, pathMatch: 'full'},
   { path: 'carrito', component: CarritoComponent, pathMatch: 'full'},
   { path: 'user', component: UserLoginComponent, pathMatch: 'full'},

@@ -12,6 +12,7 @@ import { StockFormComponent } from './stock/stock-form/stock-form.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserCartComponent } from './user/user-cart/user-cart.component';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { UserCartComponent } from './user/user-cart/user-cart.component';
     BrowserModule,
     /*AppRoutingModule,*/
     FormsModule,
+    HttpClient,
     routing
   ],
   providers: [],
